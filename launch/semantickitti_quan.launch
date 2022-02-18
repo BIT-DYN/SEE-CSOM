@@ -1,0 +1,24 @@
+<launch>
+    <arg name="pkg" default="$(find see_csom)" />
+
+    <!-- 在这里改是否连续建图 -->
+    <arg name="method" default="see_csom"/>
+    <arg name="dataset" default="semantickitti"/>
+   
+    <arg name="method_config" value="$(arg pkg)/config/methods" />
+    <arg name="data_config" value="$(arg pkg)/config/datasets/" />
+
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find see_csom)/rviz/semantickitti_node.rviz" />
+    <node pkg="see_csom" type="semantickitti_node" name="semantickitti_node" output="screen">
+
+        <!-- 在这里改使用的数据集 -->
+        <!-- <param name="dir" value="$(arg pkg)/data/$(arg dataset)_04" /> -->
+        <param name="dir" value="$(arg pkg)/data/$(arg dataset)_08" />
+
+        <rosparam file="$(arg method_config)/$(arg method).yaml" command="load" />
+
+        <rosparam file="$(arg data_config)/$(arg dataset).yaml" command="load" />
+        
+    </node>
+
+</launch>

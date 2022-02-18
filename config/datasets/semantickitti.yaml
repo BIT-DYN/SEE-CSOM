@@ -1,0 +1,25 @@
+# semantickitti_04 config
+
+# Map information
+resolution: 0.3  # 0.3  
+num_class: 21  # Number of classes 20     
+
+# Sampling resolutions
+free_resolution: 1000  # Free space sampling resolution 100
+ds_resolution: 0.2 # Downsampling factor  0.1 ，
+
+# Information about range-finder data
+scan_num: 10 # How many scans to use  100
+max_range: -1 # Sensor max range (m)  -1  
+
+color_num: 2
+
+# Dataset information
+input_data_prefix: velodyne/
+input_label_prefix: predictions/  #predictions/    
+lidar_pose_file: poses.txt
+gt_label_prefix: labels/   #labels/    
+evaluation_result_prefix: evaluations/
+
+query: false  # 不评估了
+visualize: true

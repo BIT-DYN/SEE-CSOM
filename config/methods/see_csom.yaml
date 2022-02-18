@@ -1,0 +1,17 @@
+# SemanticBKIOctoMap config
+
+# Octree parameter
+block_depth: 2  # KITTI: 3   Stanford: 2  SemanticKITTI: 2
+
+# Kernel parameters
+sf2:  0.1  # Actually sigma_0 in sparse kernel  10.0，
+ell: 0.3 # Length scale of the sparse kernel 0.3  0.4 for lidar   
+# BGK Inference class prior pseudocounts
+prior: 0.001 # each class
+
+# Threshold on variance to distinguish known/unknown
+var_thresh: 0.09
+
+# Free/Occupied Thresholds
+free_thresh: 0.3
+occupied_thresh: 0.7

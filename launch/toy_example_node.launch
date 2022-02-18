@@ -1,0 +1,23 @@
+<launch>
+    <arg name="pkg" default="$(find see_csom)" />
+    <arg name="method" default="see_csom"/>
+    <arg name="dataset" default="sim_unstructured_annotated"/>
+   
+    <arg name="method_config" value="$(arg pkg)/config/methods" />
+    <arg name="data_config" value="$(arg pkg)/config/datasets/" />
+
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find see_csom)/rviz/toy_example_node.rviz" />
+    <node pkg="see_csom" type="toy_example_node" name="toy_example_node" output="screen">
+
+        <param name="dir" value="$(arg pkg)/data/$(arg dataset)" />
+        <param name="prefix" value="$(arg dataset)" />
+
+        <!-- Load method configuration from file -->
+        <rosparam file="$(arg method_config)/$(arg method).yaml" command="load" />
+
+        <!-- Load dataset configuration from file -->
+        <rosparam file="$(arg data_config)/$(arg dataset).yaml" command="load" />
+        
+    </node>
+
+</launch>
