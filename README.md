@@ -51,3 +51,15 @@ $ roslaunch see_csom stanford_node.launch
 ```
 <img src="https://github.com/BIT-DYN/SEE-CSOM/blob/master/image/stanford.png" width="3000">
 
+## Citation
+
+```
+@article{deng2023see,
+  title={SEE-CSOM: Sharp-Edged and Efficient Continuous Semantic Occupancy Mapping for Mobile Robots},
+  author={Deng, Yinan and Wang, Meiling and Yang, Yi and Wang, Danwei and Yue, Yufeng},
+  journal={IEEE Transactions on Industrial Electronics},
+  year={2023},
+  publisher={IEEE}
+}
+```
+
