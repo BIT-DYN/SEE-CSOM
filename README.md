@@ -54,12 +54,14 @@ $ roslaunch see_csom stanford_node.launch
 ## Citation
 
 ```
-@article{deng2023see,
-  title={SEE-CSOM: Sharp-Edged and Efficient Continuous Semantic Occupancy Mapping for Mobile Robots},
+@article{see-csom,
+  title={SEE-CSOM: Sharp-Edged and Efficient Continuous Semantic Occupancy Mapping for Mobile Robots}, 
   author={Deng, Yinan and Wang, Meiling and Yang, Yi and Wang, Danwei and Yue, Yufeng},
-  journal={IEEE Transactions on Industrial Electronics},
-  year={2023},
-  publisher={IEEE}
+  journal={IEEE Transactions on Industrial Electronics}, 
+  year={2024},
+  volume={71},
+  number={2},
+  pages={1718-1728},
 }
 ```
 
